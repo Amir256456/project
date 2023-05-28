@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    z-index: 100;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+:root{
+    --mainColor: #D96C06;
+    --bgColor: #131313;
+    --textColor: #fff;
+    --secondTextColor : #acacac;
+}
+
+h2{
+    font-size: 25px;
+    color: var(--textColor);
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+}
+
+p{
+    font-size: 20px;
+    line-height: 25px;
+    word-spacing: 2px;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    padding-left: 250px;
+    padding-top: 50px;
+}
+
+header .background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -100;
+}
+
+header nav{
+    width: 100%;
+    height: 80px;
+}
+
+header nav ul{
+    width: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li{
+    width: 25%;
+    height: 30px;
+}
+
+header nav ul li a{
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--textColor);
+    transition: all 0.25s;
+}
+
+header nav ul li a:hover{
+    cursor: pointer;
+    color: var(--mainColor);
+}
+
+header .headerInfo{
+    margin-top: 180px;
+}
+header .headerInfo h1{
+    font-size: 30px;
+    color: var(--mainColor);
+    font-weight: bold;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+}
+header .headerInfo p{
+    width: 450px;
+    font-size: 20px;
+    line-height: 25px;
+    word-spacing: 2px;
+    margin-top: 40px;
+    color: var(--secondTextColor);
+}
+
+header .headerInfo .media{
+    margin-top: 50px;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .headerInfo .media img{
+    width: 36px;
+    height: 36px;
+}
+
+header .arrowDown{
+    position: absolute;
+    top: 90vh;
+    left: 50vw;
+}
+
+header .arrowDown i{
+    font-size: 40px;
+    color: var(--secondTextColor);
+}
+
+header .arrowDown i:hover{
+    cursor: pointer;
+}
+
+
+main{
+    width: 100vw;
+    height: 100%;
+}
+
+main .mainInfo{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--bgColor);
+}
+
+main .mainInfo h2{
+    margin-top: 140px;
+    color: var(--textColor);
+}
+
+main .mainInfo p{
+    margin-top: 35px;
+    width: 400px;
+    color: var(--secondTextColor);
+    text-align: center;
+}
+
+main .background{
+    position: absolute;
+    width: 100vw;
+    height: 1000px;
+    background-image: url(images/background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -100;
+}
+
+main .whyMe{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .whyMe .panel{
+    margin-top: 50px;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    width: 70%;
+    height: 600px;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .whyMe .panel h2{
+    margin-top: 70px;
+    color: var(--textColor);
+}
+
+main .whyMe .panel .row{
+    margin-top: 30px;
+    width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: start;
+}
+
+main .whyMe .panel .row .item{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .whyMe .panel .row .item i{
+    margin-top: 60px;
+    color: var(--mainColor);
+    font-size: 50px;
+}
+
+main .whyMe .panel .row .item h3{
+    margin-top: 60px;
+    font-size: 22px;
+    color: var(--textColor);
+}
+
+main .whyMe .panel .row .item p{
+    text-align: center;
+    margin-top: 30px;
+    width: 230px;
+    color: var(--secondTextColor);
+}
+
+main .info{
+    background: var(--bgColor);
+    width: 100%;
+    height: 1800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+}
+
+main .info .row:nth-child(2n){
+    flex-direction: row-reverse;
+}
+
+main .info .row{
+    margin-top: 40px;
+    width: 1100px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid transparent;
+}
+main .info .row .item{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+main .info .row .text{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+    flex-wrap: wrap;
+}
+
+main .info .row .text h3{
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--mainColor);
+}
+
+main .info .row .text p{
+    margin-top: 30px;
+    width: 350px;
+    color: var(--secondTextColor);
+}
+
+main .info .row .item img{
+    width: 470px;
+    height: 300px;
+}
+
+main .about{
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .about .panel{
+    margin-top: 50px;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    width: 40%;
+    height: 750px;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .about .panel h2{
+    margin-top: 40px;
+    color: var(--textColor);
+}
+
+main .about .panel .row{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+main .about .panel .row .icon i{
+    font-size: 25px;
+    color: #D96C06;
+}
+
+main .about .panel .row .item{
+    margin-left: 20px;
+
+}
+
+main .about .panel .row .item h3{
+    color: var(--textColor);
+
+}
+
+main .about .panel .row .item p{
+    margin-top: 15px;
+    color: var(--secondTextColor);
+}
+
+main .additional{
+    background: var(--bgColor);
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .additional h2{
+    margin-top: 40px;
+    color: var(--textColor);
+}
+
+main .additional  .row{
+    width: 70%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .additional  .row .item{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .additional  .row .item i{
+    margin-top: 60px;
+    color: var(--mainColor);
+    font-size: 50px;
+}
+
+main .additional  .row .item h3{
+    margin-top: 60px;
+    font-size: 22px;
+    color: var(--textColor);
+}
+
+main .additional .row .item p{
+    text-align: center;
+    margin-top: 30px;
+    width: 230px;
+    color: var(--secondTextColor);
+}
+
+footer{
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer i{
+    font-size: 40px;
+    margin-top: 40px;
+    color: var(--textColor);
+}
+
+footer .background{
+    position: absolute;
+    width: 100vw;
+    height: 500px;
+    background: linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(71,71,71,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -100;
+}
+
+footer nav{
+    margin-top: 100px;
+}
+
+footer nav ul{
+    width: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer nav ul li{
+    width: 25%;
+    height: 30px;
+}
+
+footer nav ul li a{ 
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--textColor);
+    transition: all 0.25s;
+}
+
+
+footer nav ul li a:hover{
+    cursor: pointer;
+    color: var(--mainColor);
+}
+
+footer .media{
+    margin-top: 30px;
+}
+
+footer .media a{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+footer a{
+    font-size: 20px;
+    margin-top: 30px;
+    color: var(--mainColor);
+}
+
