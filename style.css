@@ -39,7 +39,7 @@ p{
 header{
     width: 100vw;
     height: 100vh;
-    padding-left: 250px;
+    padding-left: 10%;
     padding-top: 50px;
 }
 
@@ -85,7 +85,7 @@ header nav ul li a:hover{
 }
 
 header .headerInfo{
-    margin-top: 180px;
+    margin-top: 10%;
 }
 header .headerInfo h1{
     font-size: 30px;
@@ -195,14 +195,15 @@ main .whyMe .panel h2{
 
 main .whyMe .panel .row{
     margin-top: 30px;
-    width: 80%;
+    max-width: 80%;
     height: 70%;
     display: flex;
     justify-content: start;
+    flex-wrap: wrap;
 }
 
 main .whyMe .panel .row .item{
-    width: 33%;
+    min-width: 33%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -244,7 +245,7 @@ main .info .row:nth-child(2n){
 
 main .info .row{
     margin-top: 40px;
-    width: 1100px;
+    max-width: 1100px;
     height: 400px;
     display: flex;
     justify-content: space-between;
@@ -252,22 +253,20 @@ main .info .row{
     border: 1px solid transparent;
 }
 main .info .row .item{
-    width: 50%;
+    min-width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 main .info .row .text{
-    width: 50%;
+    min-width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 40px;
-    flex-wrap: wrap;
 }
 
 main .info .row .text h3{
@@ -457,3 +456,339 @@ footer a{
     color: var(--mainColor);
 }
 
+@media all and (max-width : 1350px) {
+    main .additional{
+        background: var(--bgColor);
+        width: 100%;
+        height: 2000px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    main .additional h2{
+        margin-top: 40px;
+        color: var(--textColor);
+    }
+    
+    main .additional .row{
+        width: 90%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    main .additional  .row .item{
+        width: 85%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    main .additional  .row .item i{
+        margin-top: 80px;
+        color: var(--mainColor);
+        font-size: 50px;
+    }
+    
+    main .additional  .row .item h3{
+        margin-top: 60px;
+        font-size: 22px;
+        color: var(--textColor);
+    }
+    
+    main .additional .row .item p{
+        text-align: center;
+        margin-top: 30px;
+        width: 280px;
+        color: var(--secondTextColor);
+    }
+}
+
+@media all and (max-width : 1240px) {
+    main .whyMe{
+        height: 1800px;
+    }
+    
+    main .whyMe .panel{
+        width: 400px;
+        height: 1500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    main .whyMe .panel h2{
+        margin-top: 50px;
+    }
+    
+    main .whyMe .panel .row{
+        margin-top: 30px;
+        max-width: 100%;
+        height: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        flex-wrap: wrap;
+    }
+    
+    main .whyMe .panel .row .item{
+        min-width: 100%;
+        height: 33%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    main .whyMe .panel .row .item i{
+        margin-top: 60px;
+        color: var(--mainColor);
+        font-size: 50px;
+    }
+    
+    main .whyMe .panel .row .item h3{
+        margin-top: 60px;
+        font-size: 22px;
+        color: var(--textColor);
+    }
+    
+    main .whyMe .panel .row .item p{
+        text-align: center;
+        margin-top: 30px;
+        width: 230px;
+        color: var(--secondTextColor);
+    }
+    main .background{
+        position: absolute;
+        width: 100vw;
+        height: 2100px;
+        background-image: url(images/background2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: -100;
+    }
+
+    main .info{
+        background: var(--bgColor);
+        width: 100%;
+        height: 3000px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px;
+    }
+    
+    main .info .row:nth-child(n){
+        flex-direction: column-reverse;
+    }
+    
+    main .info .row{
+        margin-top: 80px;
+        max-width: 100%;
+        height: 600px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid transparent;
+    }
+    main .info .row .item{
+        margin-top: 50px;
+        min-width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    main .info .row .text{
+        margin-top: 30px;
+        min-width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0;
+    }
+    
+    main .info .row .text h3{
+        font-size: 22px;
+        font-weight: bold;
+        color: var(--mainColor);
+    }
+    
+    main .info .row .text p{
+        margin-top: 30px;
+        width: 350px;
+        color: var(--secondTextColor);
+    }
+    
+    main .info .row .item img{
+        width: 470px;
+        height: 300px;
+    }
+    main .about {
+        height: 1100px;
+    }
+    main .about .panel{
+        margin-top: 50px;
+        border: 1px solid transparent;
+        border-radius: 40px;
+        width: 60%;
+        height: 1000px;
+        background: rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media all and (max-width : 540px) {
+    header .headerInfo h1{
+        font-size: 25px;
+        line-height: 25px;
+        letter-spacing: 1.1px;
+    }
+    header .headerInfo p{
+        width: 350px;
+        font-size: 17px;
+        line-height: 20px;
+        word-spacing: 1.5px;
+        margin-top: 30px;
+    }
+    
+    header .headerInfo .media{
+        margin-top: 40px;
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    header .headerInfo .media img{
+        width: 30px;
+        height: 30px;
+    }
+
+    footer .media{
+        margin-top: 40px;
+        width: 160px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    footer .media img{
+        width: 30px;
+        height: 30px;
+    }
+    
+    header .arrowDown{
+        position: absolute;
+        top: 80vh;
+        left: 50vw;
+    }
+    
+    main .info .row .text h3{
+        font-size: 22px;
+        font-weight: bold;
+        color: var(--mainColor);
+    }
+    
+    main .info .row .text p{
+        margin-top: 25px;
+        width: 320px;
+        color: var(--secondTextColor);
+    }
+    
+    main .info .row .item img{
+        width: 370px;
+        height: 230px;
+    }
+    main .about{
+        width: 100%;
+        height: 1400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    main .about .panel{
+        margin-top: 50px;
+        border: 1px solid transparent;
+        border-radius: 40px;
+        width: 90%;
+        height: 1000px;
+        background: rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer nav{
+        display: none;
+    }
+    header nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--bgColor);
+        z-index: 200;
+        transform: translateX(-100vw);
+        transition: all 0.4s;
+    }
+
+    header .active{
+        transform: translateX(0);
+    }
+
+    header nav ul{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+    }
+
+    header nav ul li{
+        text-align: center;
+        margin: 25px 0;
+    }
+
+    header .toggleMenu i{
+        position: absolute;
+        font-size: 32px;
+        color: var(--textColor);
+        z-index: 201;
+    }
+
+    header .headerInfo{
+        margin-top: 30%;
+    }
+
+    header .headerInfo p{
+        width: 300px;
+        font-size: 20px;
+        line-height: 25px;
+        word-spacing: 2px;
+        margin-top: 40px;
+        color: var(--secondTextColor);
+    }
+    
+    main .mainInfo h2{
+        margin-top: 100px;
+        color: var(--textColor);
+        font-size: 20px;
+    }
+    
+    main .mainInfo p{
+        margin-top: 30px;
+        width: 80%;
+        color: var(--secondTextColor);
+        text-align: center;
+    }
+}

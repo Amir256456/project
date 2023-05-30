@@ -10,3 +10,19 @@ for (let smoothLink of smoothLinks) {
         });
     });
 };
+
+
+let toggleBtn = document.querySelector('.toggleBtn');
+let nav = document.querySelector('.nav');
+
+toggleBtn.addEventListener('click', () =>{
+    if(toggleBtn.classList.contains('fa-bars')){
+        toggleBtn.classList.remove('fa-bars');
+        toggleBtn.classList.add('fa-xmark');
+    }else{
+        toggleBtn.classList.remove('fa-xmark');
+        toggleBtn.classList.add('fa-bars');
+    }
+
+    nav.classList.toggle('active');
+})
