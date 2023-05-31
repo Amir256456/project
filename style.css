@@ -36,11 +36,72 @@ p{
     word-spacing: 2px;
 }
 
+button{
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: var(--mainColor);
+    color: var(--textColor);
+    margin-top: 20px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.modalWindow{
+    position: absolute;
+    width: 280px;
+    height: 400px;
+    background-color: rgba(0,0,0,0.9);
+    border: 1px solid transparent;
+    border-radius: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: calc(50vh - 200px);
+    margin-left: calc(50vw - 140px);
+    z-index: 300;
+}
+
+.modalWindow.active{
+    display: flex;
+}
+
+.modalWindow .exit{
+    position: absolute;
+    top: 0;
+    height: 36px;
+    width: 100%;
+}
+
+.modalWindow .exit i{
+    color: var(--textColor);
+    font-size: 30px;
+    margin: 15px;
+}
+
+.modalWindow input{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 35px;
+    width: 220px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: transparent;
+    border-bottom-color: #D96C06;
+    color: var(--textColor);
+    padding-left: 15px;
+    font-size: 18px;
+}
+
 header{
     width: 100vw;
     height: 100vh;
-    padding-left: 10%;
-    padding-top: 50px;
 }
 
 header .toggleMenu{
@@ -48,16 +109,22 @@ header .toggleMenu{
 }
 
 header .background{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(images/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -100;
+	position: relative;
+	width: 100vw;    
+	height: 100vh;
+	background: 
+		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+		url(images/background.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: top;  
+    padding-top: 5%;
+    padding-left: 7%;
 }
+
+
+
 
 header nav{
     width: 100%;
@@ -88,9 +155,10 @@ header nav ul li a:hover{
     color: var(--mainColor);
 }
 
-header .headerInfo{
-    margin-top: 10%;
+header .headerInfo {
+    margin-top: 7%;
 }
+
 header .headerInfo h1{
     font-size: 30px;
     color: var(--mainColor);
@@ -684,6 +752,13 @@ footer a{
         display: flex;
         justify-content: space-between;
     }
+    footer{
+        width: 100vw;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     
     footer .media img{
         width: 30px;
@@ -731,11 +806,20 @@ footer a{
         flex-direction: column;
         align-items: center;
     }
+    footer .background{
+        position: absolute;
+        width: 100vw;
+        height: 300px;
+        background: linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(71,71,71,1) 100%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: -100;
+    }
     footer nav{
         display: none;
     }
     header nav{
-        position: absolute;
         top: 0;
         left: 0;
         width: 100vw;

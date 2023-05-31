@@ -34,3 +34,21 @@ toggleBtn.addEventListener('click', () =>{
 
     nav.classList.toggle('active');
 })
+
+
+let modalBtn = document.querySelector('.modal');
+let modalWindow = document.querySelector('.modalWindow');
+let exitBtn = document.querySelector('.exit');
+let sendBtn = document.querySelector('.send');
+
+modalBtn.addEventListener('click', () => {
+    modalWindow.classList.add('active');
+})
+
+exitBtn.addEventListener('click', () => {
+    modalWindow.classList.remove('active');
+})
+
+sendBtn.addEventListener('click', () =>{
+    modalWindow.classList.remove('active');
+})
