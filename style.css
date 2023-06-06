@@ -139,12 +139,15 @@ header nav ul{
 }
 
 header nav ul li{
-    width: 25%;
+    width: 80px;
     height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header nav ul li a{
-    font-size: 18px;
+    font-size: 14px;
     line-height: 20px;
     color: var(--textColor);
     transition: all 0.25s;
@@ -457,6 +460,130 @@ main .additional .row .item p{
     margin-top: 30px;
     width: 230px;
     color: var(--secondTextColor);
+}
+
+header .general{
+    margin-left: 100px;
+    margin-top: 200px;
+    color: var(--textColor);
+}
+
+header .general h1{
+    margin-bottom: 40px;
+}
+
+header .general p{
+    width: 600px;
+}
+
+main .advantages{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--bgColor);
+    padding-top: 100px;
+}
+
+main .advantages .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+main .advantages .row .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 400px;
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 100%;
+}
+
+main .advantages .row .item i{
+    font-size: 30px;
+    color: var(--textColor);
+}
+
+main .advantages .row .item h2{
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+main .advantages .row .item p{
+    color: var(--textColor);
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+main .whyWe{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #000004;
+    padding :50px 0;
+}
+
+main .whyWe .wrapper{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .whyWe .wrapper .item{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+main .whyWe .wrapper .item .text{
+    color: var(--textColor);
+    margin-left: 30px;
+}
+
+main .whyWe .wrapper .item .text p{
+    margin-top: 30px;
+    width: 300px;
+}
+
+main .whyWe .wrapper .item .icon i{
+    font-size: 30px;
+    color: var(--mainColor);
+}
+
+main .clients{
+    height: 100%;
+    width: 100%;
+    background: var(--bgColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+main .clients .item{
+    min-width: 300px;
+    max-width: 400px;
+    height: 100%;
+    margin-top: 40px;
+    color: var(--textColor);
+
+}
+
+main .clients .item h2{
+    margin-bottom: 25px;
 }
 
 footer{
