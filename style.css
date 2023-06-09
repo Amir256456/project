@@ -1,3 +1,4 @@
+/*? General */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap');
 
 *{
@@ -7,35 +8,33 @@
     font-family: 'Lato', sans-serif;
     outline: none;
     text-decoration: none;
-    list-style-type: none;
-    z-index: 100;
 }
-
 html{
     overflow-x: hidden;
+    background: var(--bgColor);
 }
-
 :root{
-    --mainColor: #D96C06;
-    --bgColor: #131313;
+    --mainColor: #F3A712;
+    --bgColor: #212227;
     --textColor: #fff;
-    --secondTextColor : #acacac;
+    --secondTextColor: rgba(255,255,255, 0.80);
+    --thirdTextColor: rgba(255,255,255, 0.65);
 }
-
 h2{
     font-size: 26px;
     color: var(--textColor);
     font-weight: 700;
-    line-height: 30px;
     letter-spacing: 1.2px;
+    text-align: center;
 }
-
+h3{
+    font-size: 21px;
+    color: var(--secondTextColor);
+}
 p{
-    font-size: 20px;
-    line-height: 25px;
-    word-spacing: 2px;
+    font-size: 18px;
+    color: var(--thirdTextColor);
 }
-
 button{
     width: 180px;
     height: 50px;
@@ -47,11 +46,11 @@ button{
     color: var(--textColor);
     margin-top: 20px;
 }
-
 button:hover{
     cursor: pointer;
 }
 
+/*? Modal window */
 .modalWindow{
     position: absolute;
     width: 280px;
@@ -99,309 +98,430 @@ button:hover{
     font-size: 18px;
 }
 
+/*? Header */
 header{
     width: 100vw;
-    height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 header .toggleMenu{
     display: none;
 }
-
-header .background{
-	position: relative;
-	width: 100vw;    
-	height: 100vh;
-	background: 
-		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-		url(images/background.png);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: top;  
-    padding-top: 5%;
-    padding-left: 7%;
-}
-
-
-
-
 header nav{
     width: 100%;
-    height: 80px;
+    height: 100px;
+    padding-top: 20px;
+    padding-left: 50px;
 }
-
 header nav ul{
-    width: 400px;
+    max-width: 500px;
     height: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-
 header nav ul li{
-    width: 80px;
-    height: 30px;
+    width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 header nav ul li a{
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
     color: var(--textColor);
     transition: all 0.25s;
 }
-
 header nav ul li a:hover{
     cursor: pointer;
     color: var(--mainColor);
 }
 
-header .headerInfo {
-    margin-top: 7%;
-}
-
-header .headerInfo h1{
-    font-size: 30px;
+header .mainInfo h1{
+    max-width: 600px;
+    height: 60%;
+    letter-spacing: 1.2px;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 150px;
+    text-align: end;
+    font-size: 5rem;
     color: var(--mainColor);
     font-weight: bold;
-    line-height: 30px;
-    letter-spacing: 1.2px;
 }
-header .headerInfo p{
-    width: 450px;
-    font-size: 20px;
-    line-height: 25px;
-    word-spacing: 2px;
-    margin-top: 40px;
-    color: var(--secondTextColor);
-}
-
-header .headerInfo .media{
-    margin-top: 50px;
-    width: 150px;
+header .mainInfo ul{
+    max-width: 600px;
+    height: 40%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 10%;
 }
-
-header .headerInfo .media img{
-    width: 36px;
-    height: 36px;
-}
-
-header .arrowDown{
-    position: absolute;
-    top: 90vh;
-    left: 50vw;
-}
-
-header .arrowDown i{
-    font-size: 40px;
+header .mainInfo ul li{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0;
+    font-size: 21px;
     color: var(--secondTextColor);
 }
 
-header .arrowDown i:hover{
-    cursor: pointer;
+header .background{
+    max-width: 600px;
+    height: 100%;
 }
 
+@media all and (max-width : 950px) {
+    header{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 200px;
+    }
+
+    header nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        background: var(--bgColor);
+        z-index: 1;
+        transform: translateX(-100vw);
+        transition: all 0.4s;
+    }
+    header .active{
+        transform: translateX(0);
+    }
+    header nav ul{
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+    }
+    header nav ul li{
+        text-align: center;
+        margin: 25px 0;
+    }
+    header .toggleMenu{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-self: flex-start;
+        justify-content: start;
+    }
+    header .toggleMenu i{
+        position: absolute;
+        top: 25px;
+        left: 50px;
+        font-size: 32px;
+        color: var(--textColor);
+        z-index: 2;
+    }
+
+    header .mainInfo h1{
+        height: 50%;
+        padding-top: 0;
+        letter-spacing: 1.1px;
+        justify-content: flex-start;
+        text-align: left;
+        font-size: 4rem;
+    } 
+    header .mainInfo ul{
+        height: 50%;
+    }
+    header .mainInfo ul li{
+        display: flex;
+        justify-content: flex-start;
+        margin: 10px 0;
+        font-size: 18px;
+    }
+    header .background{
+        max-width: 600px;
+        height: 100%;
+        margin-top: 25px;
+    }
+}
+
+@media all and (max-width : 650px) {
+    header .mainInfo h1{
+        font-size: 3rem;
+    } 
+    header .mainInfo ul li{
+        font-size: 16px;
+    }
+    header .background{
+        max-width: 400px;
+    }
+}
+
+@media all and (max-width : 410px) {
+    header{
+        padding-top: 100px;
+    }
+
+    header .toggleMenu i{
+        font-size: 28px !important;
+    }
+
+    header .mainInfo h1{
+        font-size: 2rem;
+    } 
+    header .mainInfo ul li{
+        font-size: 12px;
+    }
+    header .background{
+        max-width: 280px;
+    }
+}
+
+
+/*? Main */
+.hr{
+    width: 60%;
+    height: 2px;
+    background: rgb(33,34,39);
+    background: linear-gradient(90deg, rgba(33,34,39,1) 0%, rgba(243,167,18,1) 100%);
+    margin: 50px auto;
+}
 
 main{
-    width: 100vw;
+    max-width: 1200px;
     height: 100%;
+    margin: 0 auto;
 }
 
-main .mainInfo{
+/** Media */
+
+main .media{
     width: 100%;
-    height: 400px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: var(--bgColor);
+    row-gap: 50px;
+    margin: 40px 0;
+}
+main .media a{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0;
+    border-radius: 10px;
+}
+main .media .telegram{
+    border: 1px solid #0088cc;
+    -webkit-box-shadow: 1px 1px 37px 9px rgba(0, 136, 204, 0.27);
+    -moz-box-shadow: 1px 1px 37px 9px rgba(0, 136, 204, 0.27);
+    box-shadow: 1px 1px 37px 9px rgba(0, 136, 204, 0.27);
+}
+main .media .instagram{
+    -webkit-box-shadow: 1px 1px 37px 9px rgba(225, 48, 108, 0.27);
+    -moz-box-shadow: 1px 1px 37px 9px rgba(225, 48, 108, 0.27);
+    box-shadow: 1px 1px 37px 9px rgba(225, 48, 108, 0.27);
+}
+main .media .facebook{
+    -webkit-box-shadow: 1px 1px 37px 9px rgba(59, 89, 152, 0.27);
+    -moz-box-shadow: 1px 1px 37px 9px rgba(59, 89, 152, 0.27);
+    box-shadow: 1px 1px 37px 9px rgba(59, 89, 152, 0.27);
+}
+main .media a .item{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main .media .telegram .item h3{
+    color: #0088cc;
+}
+main .media .instagram .item h3{
+    color: #E1306C;
+}
+main .media .facebook .item h3{
+    color: #3b5998;
 }
 
-main .mainInfo h2{
-    margin-top: 140px;
-    color: var(--textColor);
-}
 
-main .mainInfo p{
-    margin-top: 35px;
-    width: 400px;
-    color: var(--secondTextColor);
-    text-align: center;
-}
-
-main .background{
-    position: absolute;
-    width: 100vw;
-    height: 1000px;
-    background-image: url(images/background2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    z-index: -100;
-}
+/** Why me */
 
 main .whyMe{
-    width: 100%;
-    height: 700px;
+    width: 90%;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-main .whyMe .panel{
-    margin-top: 50px;
-    border: 1px solid transparent;
-    border-radius: 40px;
-    width: 70%;
-    height: 600px;
-    background: rgba(0, 0, 0, 0.4);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-main .whyMe .panel h2{
-    margin-top: 70px;
-    color: var(--textColor);
-}
-
-main .whyMe .panel .row{
-    margin-top: 30px;
-    max-width: 80%;
-    height: 70%;
-    display: flex;
-    justify-content: start;
+    justify-content: space-around;
     flex-wrap: wrap;
+    margin: 40px auto;
+    padding: 40px 0;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.4);
 }
-
-main .whyMe .panel .row .item{
-    min-width: 33%;
+main .whyMe .item{
+    max-width: 360px;
     height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-
-main .whyMe .panel .row .item i{
-    margin-top: 60px;
+main .whyMe .item i{
     color: var(--mainColor);
-    font-size: 50px;
+    font-size: 45px;
 }
-
-main .whyMe .panel .row .item h3{
-    margin-top: 60px;
-    font-size: 22px;
-    color: var(--textColor);
+main .whyMe .item h3{
+    margin-top: 50px;
 }
-
-main .whyMe .panel .row .item p{
+main .whyMe .item p{
     text-align: center;
     margin-top: 30px;
-    width: 230px;
-    color: var(--secondTextColor);
+    width: 80%;
 }
+@media all and (max-width : 1200px) {
+    main .whyMe{
+        flex-direction: column;
+        row-gap: 50px;
+    }
+
+    main .whyMe .item{
+        border-radius: 10px;
+        -webkit-box-shadow: 1px 1px 37px 0px rgba(255, 255, 255, 0.27);
+        -moz-box-shadow: 1px 1px 37px 0px rgba(255, 255, 255, 0.27);
+        box-shadow: 1px 1px 37px 0px rgba(255, 255, 255, 0.27);
+        padding: 40px 0;
+    }
+}
+
+/** Info */
 
 main .info{
-    background: var(--bgColor);
+    width: 90%;
+    height: 100%;
+}
+main .info .item{
     width: 100%;
-    height: 1800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 80px;
-}
-
-main .info .row:nth-child(2n){
-    flex-direction: row-reverse;
-}
-
-main .info .row{
-    margin-top: 40px;
-    max-width: 1100px;
-    height: 400px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid transparent;
-}
-main .info .row .item{
-    min-width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main .info .row .text{
-    min-width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 40px;
-}
-
-main .info .row .text h3{
-    font-size: 22px;
-    font-weight: bold;
-    color: var(--mainColor);
-}
-
-main .info .row .text p{
-    margin-top: 30px;
-    width: 350px;
-    color: var(--secondTextColor);
-}
-
-main .info .row .item img{
-    width: 470px;
     height: 300px;
-}
-
-main .about{
-    width: 100%;
-    height: 1000px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+main .info .item .text{
+    width: 40%;
+    height: 250px;
+    padding-top: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    margin-right: -250px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid rgba(243,167,18,0.6);
+}
+main .info .item .text p{
+    margin-top: 20px;
+    width: 70%;
+}
+main .info .item img{
+    width: 50%;
+    height: 100%;
+}
+@media all and (max-width : 950px) {
+    main .info{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    main .info .item{
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100%;
+        width: 100%;
+    }
+    main .info .item .text{
+        width: 90%;
+        height: 100%;
+        padding-top: 20px;
+        background: transparent;
+        margin: 0;
+        margin-top: 40px;
+        padding: 20px;
+    }
+    main .info .item .text p{
+        margin-top: 20px;
+        width: 80%;
+    }
+    main .info .item img{
+        display: block;
+        position: relative;
+        width: 90%;
+        height: 100%;
+    }
 }
 
-main .about .panel{
-    margin-top: 50px;
-    border: 1px solid transparent;
-    border-radius: 40px;
-    width: 40%;
-    height: 750px;
+
+/** Advantages */
+
+main .advantages{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+    padding: 40px 0;
+    border-radius: 10px;
     background: rgba(0, 0, 0, 0.4);
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    row-gap: 40px;
 }
-
-main .about .panel h2{
-    margin-top: 40px;
-    color: var(--textColor);
-}
-
-main .about .panel .row{
-    width: 80%;
+main .advantages .item{
+    width: 60%;
     display: flex;
     justify-content: center;
-    margin-top: 60px;
 }
-
-main .about .panel .row .icon i{
+main .advantages .item .icon i{
     font-size: 25px;
-    color: #D96C06;
+    color: var(--mainColor);
 }
-
-main .about .panel .row .item{
+main .item .text{
     margin-left: 20px;
-
 }
+main .item .text p{
+    margin-top: 10px;
+}
+@media all and (max-width : 650px) {
+    main .advantages .item{
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 main .about .panel .row .item h3{
     color: var(--textColor);
@@ -476,50 +596,8 @@ header .general p{
     width: 600px;
 }
 
-main .advantages{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background: var(--bgColor);
-    padding-top: 100px;
-}
 
-main .advantages .row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 50px 0;
-}
 
-main .advantages .row .item{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-width: 300px;
-    max-width: 400px;
-    margin-right: 20px;
-    margin-left: 20px;
-    height: 100%;
-}
-
-main .advantages .row .item i{
-    font-size: 30px;
-    color: var(--textColor);
-}
-
-main .advantages .row .item h2{
-    margin-top: 25px;
-    font-size: 20px;
-}
-
-main .advantages .row .item p{
-    color: var(--textColor);
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
 
 main .whyWe{
     width: 100%;
@@ -655,7 +733,7 @@ footer a{
     color: var(--mainColor);
 }
 
-@media all and (max-width : 1350px) {
+/* @media all and (max-width : 1350px) {
     main .additional{
         background: var(--bgColor);
         width: 100%;
@@ -1011,4 +1089,4 @@ footer a{
         color: var(--secondTextColor);
         text-align: center;
     }
-}
+} */
