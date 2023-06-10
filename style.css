@@ -36,18 +36,23 @@ p{
     color: var(--thirdTextColor);
 }
 button{
-    width: 180px;
+    width: 240px;
     height: 50px;
-    font-size: 20px;
+    font-size: 21px;
     outline: none;
-    border: 1px solid transparent;
+    border: none;
     border-radius: 10px;
-    background: var(--mainColor);
+    background: rgb(243,167,18);
+    background: linear-gradient(145deg, rgba(243,167,18,1) 0%, rgba(33,34,39,1) 68%);
     color: var(--textColor);
     margin-top: 20px;
+    transition: all 0.4s;
 }
 button:hover{
     cursor: pointer;
+    -webkit-box-shadow: 13px 2px 43px 5px rgba(243, 167, 18, 0.35);
+    -moz-box-shadow: 13px 2px 43px 5px rgba(243, 167, 18, 0.35);
+    box-shadow: 13px 2px 43px 5px rgba(243, 167, 18, 0.35);
 }
 
 /*? Modal window */
@@ -386,6 +391,7 @@ main .whyMe .item p{
 
     main .whyMe .item{
         border-radius: 10px;
+        width: 90%;
         -webkit-box-shadow: 1px 1px 37px 0px rgba(255, 255, 255, 0.27);
         -moz-box-shadow: 1px 1px 37px 0px rgba(255, 255, 255, 0.27);
         box-shadow: 1px 1px 37px 0px rgba(255, 255, 255, 0.27);
@@ -503,590 +509,95 @@ main .item .text p{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-main .about .panel .row .item h3{
-    color: var(--textColor);
-
-}
-
-main .about .panel .row .item p{
-    margin-top: 15px;
-    color: var(--secondTextColor);
-}
-
-main .additional{
-    background: var(--bgColor);
-    width: 100%;
-    height: 700px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-main .additional h2{
-    margin-top: 40px;
-    color: var(--textColor);
-}
-
-main .additional  .row{
-    width: 70%;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main .additional  .row .item{
-    width: 25%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-main .additional  .row .item i{
-    margin-top: 60px;
-    color: var(--mainColor);
-    font-size: 50px;
-}
-
-main .additional  .row .item h3{
-    margin-top: 60px;
-    font-size: 22px;
-    color: var(--textColor);
-}
-
-main .additional .row .item p{
-    text-align: center;
-    margin-top: 30px;
-    width: 230px;
-    color: var(--secondTextColor);
-}
-
-header .general{
-    margin-left: 100px;
-    margin-top: 200px;
-    color: var(--textColor);
-}
-
-header .general h1{
-    margin-bottom: 40px;
-}
-
-header .general p{
-    width: 600px;
-}
-
-
-
-
-main .whyWe{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: #000004;
-    padding :50px 0;
-}
-
-main .whyWe .wrapper{
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-main .whyWe .wrapper .item{
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
-}
-
-main .whyWe .wrapper .item .text{
-    color: var(--textColor);
-    margin-left: 30px;
-}
-
-main .whyWe .wrapper .item .text p{
-    margin-top: 30px;
-    width: 300px;
-}
-
-main .whyWe .wrapper .item .icon i{
-    font-size: 30px;
-    color: var(--mainColor);
-}
-
-main .clients{
-    height: 100%;
-    width: 100%;
-    background: var(--bgColor);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
-    flex-wrap: wrap;
-    padding: 50px 0;
-}
-
-main .clients .item{
-    min-width: 300px;
-    max-width: 400px;
-    height: 100%;
-    margin-top: 40px;
-    color: var(--textColor);
-
-}
-
-main .clients .item h2{
-    margin-bottom: 25px;
-}
+/*? Footer */
 
 footer{
-    width: 100vw;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-footer i{
-    font-size: 40px;
-    margin-top: 40px;
-    color: var(--textColor);
-}
-
-footer .background{
-    position: absolute;
-    width: 100vw;
-    height: 500px;
-    background: linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(71,71,71,1) 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    z-index: -100;
-}
-
-footer nav{
-    margin-top: 100px;
-}
-
-footer nav ul{
-    width: 400px;
+    max-width: 1200px;
     height: 100%;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 30px;
+    row-gap: 50px;
+}
+
+/** Contacts */
+
+footer .contacts{
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .contacts a{
+    color: var(--mainColor);
+    font-size: 21px;
+    margin: 10px 0;
+}
+footer .contacts .media{
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+}
+footer .contacts .media img{
+    width: 36px;
+    height: 36px;
+}
+
+/** Form */
+
+footer .form{
+    min-width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
-
-footer nav ul li{
-    width: 25%;
+footer .form h2{
+    margin-bottom: 30px;
+}
+footer .form input{
+    width: 240px;
     height: 30px;
-}
-
-footer nav ul li a{ 
-    font-size: 18px;
-    line-height: 20px;
+    margin: 20px 0;
+    padding-left: 5px;
+    background: transparent;
     color: var(--textColor);
-    transition: all 0.25s;
+    font-size: 16px;
+    border-bottom-color: var(--mainColor);
+    border-right-color: var(--mainColor);
+    transition: all 0.2s;
 }
-
-
-footer nav ul li a:hover{
-    cursor: pointer;
-    color: var(--mainColor);
+footer .form input:focus{
+    padding-bottom: 5px;
+    padding-left: 10px;
 }
-
-footer .media{
-    margin-top: 30px;
-}
-
-footer .media a{
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-footer a{
-    font-size: 20px;
-    margin-top: 30px;
-    color: var(--mainColor);
-}
-
-/* @media all and (max-width : 1350px) {
-    main .additional{
-        background: var(--bgColor);
-        width: 100%;
-        height: 2000px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+@media all and (max-width : 650px) {
+    footer .form{
+        min-width: 400px;
     }
-    
-    main .additional h2{
-        margin-top: 40px;
-        color: var(--textColor);
-    }
-    
-    main .additional .row{
-        width: 90%;
-        margin-top: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    
-    main .additional  .row .item{
-        width: 85%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    
-    main .additional  .row .item i{
-        margin-top: 80px;
-        color: var(--mainColor);
-        font-size: 50px;
-    }
-    
-    main .additional  .row .item h3{
-        margin-top: 60px;
-        font-size: 22px;
-        color: var(--textColor);
-    }
-    
-    main .additional .row .item p{
-        text-align: center;
-        margin-top: 30px;
-        width: 280px;
-        color: var(--secondTextColor);
+    footer .contacts{
+        min-width: 400px;
     }
 }
-
-@media all and (max-width : 1240px) {
-    main .whyMe{
-        height: 1800px;
+@media all and (max-width : 410px) {
+    footer .form{
+        min-width: 280px;
     }
-    
-    main .whyMe .panel{
-        width: 400px;
-        height: 1500px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    main .whyMe .panel h2{
-        margin-top: 50px;
-    }
-    
-    main .whyMe .panel .row{
-        margin-top: 30px;
-        max-width: 100%;
-        height: 95%;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        flex-wrap: wrap;
-    }
-    
-    main .whyMe .panel .row .item{
-        min-width: 100%;
-        height: 33%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    
-    main .whyMe .panel .row .item i{
-        margin-top: 60px;
-        color: var(--mainColor);
-        font-size: 50px;
-    }
-    
-    main .whyMe .panel .row .item h3{
-        margin-top: 60px;
-        font-size: 22px;
-        color: var(--textColor);
-    }
-    
-    main .whyMe .panel .row .item p{
-        text-align: center;
-        margin-top: 30px;
-        width: 230px;
-        color: var(--secondTextColor);
-    }
-    main .background{
-        position: absolute;
-        width: 100vw;
-        height: 2100px;
-        background-image: url(images/background2.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        z-index: -100;
-    }
-
-    main .info{
-        background: var(--bgColor);
-        width: 100%;
-        height: 3000px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 80px;
-    }
-    
-    main .info .row:nth-child(n){
-        flex-direction: column-reverse;
-    }
-    
-    main .info .row{
-        margin-top: 80px;
-        max-width: 100%;
-        height: 600px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-        border: 1px solid transparent;
-    }
-    main .info .row .item{
-        margin-top: 50px;
-        min-width: 100%;
-        height: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    main .info .row .text{
-        margin-top: 30px;
-        min-width: 100%;
-        height: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-left: 0;
-    }
-    
-    main .info .row .text h3{
-        font-size: 22px;
-        font-weight: bold;
-        color: var(--mainColor);
-    }
-    
-    main .info .row .text p{
-        margin-top: 30px;
-        width: 350px;
-        color: var(--secondTextColor);
-    }
-    
-    main .info .row .item img{
-        width: 470px;
-        height: 300px;
-    }
-    main .about {
-        height: 1100px;
-    }
-    main .about .panel{
-        margin-top: 50px;
-        border: 1px solid transparent;
-        border-radius: 40px;
-        width: 60%;
-        height: 1000px;
-        background: rgba(0, 0, 0, 0.4);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    footer .contacts{
+        min-width: 280px;
     }
 }
 
 
-@media all and (max-width : 540px) {
-    header .headerInfo h1{
-        font-size: 25px;
-        line-height: 25px;
-        letter-spacing: 1.1px;
-    }
-    header .headerInfo p{
-        width: 350px;
-        font-size: 17px;
-        line-height: 20px;
-        word-spacing: 1.5px;
-        margin-top: 30px;
-    }
-    
-    header .headerInfo .media{
-        margin-top: 40px;
-        width: 120px;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    header .headerInfo .media img{
-        width: 30px;
-        height: 30px;
-    }
 
-    footer .media{
-        margin-top: 40px;
-        width: 160px;
-        display: flex;
-        justify-content: space-between;
-    }
-    footer{
-        width: 100vw;
-        height: 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    footer .media img{
-        width: 30px;
-        height: 30px;
-    }
-    
-    header .arrowDown{
-        position: absolute;
-        top: 80vh;
-        left: 50vw;
-    }
-    
-    main .info .row .text h3{
-        font-size: 22px;
-        font-weight: bold;
-        color: var(--mainColor);
-    }
-    
-    main .info .row .text p{
-        margin-top: 25px;
-        width: 320px;
-        color: var(--secondTextColor);
-    }
-    
-    main .info .row .item img{
-        width: 370px;
-        height: 230px;
-    }
-    main .about{
-        width: 100%;
-        height: 1400px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    main .about .panel{
-        margin-top: 50px;
-        border: 1px solid transparent;
-        border-radius: 40px;
-        width: 90%;
-        height: 1000px;
-        background: rgba(0, 0, 0, 0.4);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    footer .background{
-        position: absolute;
-        width: 100vw;
-        height: 300px;
-        background: linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(71,71,71,1) 100%);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        z-index: -100;
-    }
-    footer nav{
-        display: none;
-    }
-    header nav{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: var(--bgColor);
-        z-index: 200;
-        transform: translateX(-100vw);
-        transition: all 0.4s;
-    }
 
-    header .active{
-        transform: translateX(0);
-    }
 
-    header nav ul{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; 
-    }
 
-    header nav ul li{
-        text-align: center;
-        margin: 25px 0;
-    }
 
-    header .toggleMenu{
-        display: block;
-    }
 
-    header .toggleMenu i{
-        position: absolute;
-        font-size: 32px;
-        color: var(--textColor);
-        z-index: 201;
-    }
 
-    header .headerInfo{
-        margin-top: 30%;
-    }
 
-    header .headerInfo p{
-        width: 300px;
-        font-size: 20px;
-        line-height: 25px;
-        word-spacing: 2px;
-        margin-top: 40px;
-        color: var(--secondTextColor);
-    }
-    
-    main .mainInfo h2{
-        margin-top: 100px;
-        color: var(--textColor);
-        font-size: 20px;
-    }
-    
-    main .mainInfo p{
-        margin-top: 30px;
-        width: 80%;
-        color: var(--secondTextColor);
-        text-align: center;
-    }
-} */
