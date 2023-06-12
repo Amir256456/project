@@ -134,6 +134,14 @@ header .mainInfo ul li{
 header .background{
     max-width: 600px;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .background img{
+    width: 100%;
+    height: 100%;
 }
 
 @media all and (max-width : 950px) {
