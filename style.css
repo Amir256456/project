@@ -55,54 +55,6 @@ button:hover{
     box-shadow: 13px 2px 43px 5px rgba(243, 167, 18, 0.35);
 }
 
-/*? Modal window */
-.modalWindow{
-    position: absolute;
-    width: 280px;
-    height: 400px;
-    background-color: rgba(0,0,0,0.9);
-    border: 1px solid transparent;
-    border-radius: 30px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: calc(50vh - 200px);
-    margin-left: calc(50vw - 140px);
-    z-index: 300;
-}
-
-.modalWindow.active{
-    display: flex;
-}
-
-.modalWindow .exit{
-    position: absolute;
-    top: 0;
-    height: 36px;
-    width: 100%;
-}
-
-.modalWindow .exit i{
-    color: var(--textColor);
-    font-size: 30px;
-    margin: 15px;
-}
-
-.modalWindow input{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    height: 35px;
-    width: 220px;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    background: transparent;
-    border-bottom-color: #D96C06;
-    color: var(--textColor);
-    padding-left: 15px;
-    font-size: 18px;
-}
-
 /*? Header */
 header{
     width: 100vw;
@@ -144,13 +96,21 @@ header nav ul li a:hover{
     color: var(--mainColor);
 }
 
+header .mainInfo{
+    max-width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 100px;
+}
+
 header .mainInfo h1{
     max-width: 600px;
     height: 60%;
     letter-spacing: 1.2px;
     display: flex;
     justify-content: flex-end;
-    padding-top: 150px;
     text-align: end;
     font-size: 5rem;
     color: var(--mainColor);
