@@ -22,8 +22,8 @@ html{
     background: var(--bgColor);
 }
 :root{
-    --mainColor: #F3A712;
-    --bgColor: #212227;
+    --mainColor: #ED993C;
+    --bgColor: #211445;
     --textColor: #fff;
     --secondTextColor: rgba(255,255,255, 0.80);
     --thirdTextColor: rgba(255,255,255, 0.65);
@@ -635,6 +635,25 @@ main .item .text p{
     }
 }
 
+/** About Company*/
+main .about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .about p{
+    text-align: center;
+    margin-top: 30px;
+    max-width: 600px;
+}
+
+@media all and (max-width : 650px) {
+    main .about p{
+        width: 80%;
+    }
+}
 
 /*? Footer */
 
@@ -719,6 +738,7 @@ footer .form input{
     background: transparent;
     color: var(--textColor);
     font-size: 16px;
+    border: 1px solid transparent;
     border-bottom-color: var(--mainColor);
     border-right-color: var(--mainColor);
     -webkit-transition: all 0.2s;
@@ -729,6 +749,9 @@ footer .form input:focus{
     padding-bottom: 5px;
     padding-left: 10px;
 }
+
+
+
 @media all and (max-width : 650px) {
     footer .form{
         min-width: 400px;
