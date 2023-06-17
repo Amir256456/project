@@ -17,17 +17,28 @@
     outline: none;
     text-decoration: none;
 }
-html{
-    overflow-x: hidden;
-    background: var(--bgColor);
-}
+
 :root{
     --mainColor: #ED993C;
     --bgColor: #211445;
+    --bgColor1: #212227;
     --textColor: #fff;
     --secondTextColor: rgba(255,255,255, 0.80);
     --thirdTextColor: rgba(255,255,255, 0.65);
 }
+
+html{
+    overflow-x: hidden;
+}
+
+.private{
+    background: var(--bgColor1);
+}
+
+.company{
+    background: var(--bgColor);
+}
+
 h2{
     font-size: 26px;
     color: var(--textColor);
