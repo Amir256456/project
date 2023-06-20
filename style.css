@@ -543,6 +543,7 @@ main .info a .item .text{
 main .info a .item .text p{
     margin-top: 20px;
     width: 70%;
+    text-align: center;
 }
 main .info a .item img{
     width: 50%;
