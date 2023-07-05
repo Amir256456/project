@@ -11,9 +11,9 @@
 }
 
 :root {
-    --bgColor: #dbdbdb;
-    --bgColor1:#dbdbdb;
-    --mainColor:#F89A2E;
+    --bgColor: #cccccc;
+    --bgColor1:#cccccc;
+    --mainColor:#F89A2A;
     --secondTextColor:rgba(0,0,0,0.80);
     --textColor:#111;
     --thirdTextColor:rgba(0,0,0,0.65)
